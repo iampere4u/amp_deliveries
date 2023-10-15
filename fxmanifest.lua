@@ -11,8 +11,3 @@ server_scripts {
 	'server/server.lua',
 }
 
-shared_scripts {
-	'locale.lua',
-	'locales/es.lua',
-	'locales/en.lua',
-}

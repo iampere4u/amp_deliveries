@@ -126,6 +126,7 @@ Citizen.CreateThread(function()
 		Citizen.Wait(0)
 		local playerPed = PlayerPedId()
 		local coords = GetEntityCoords(playerPed)
+       
 		for k,v in pairs(Config.MainJob) do
 			local wag
 			local betweencoords = GetDistanceBetweenCoords(coords.x, coords.y, coords.z, v.x, v.y, v.z, false)
@@ -146,6 +147,7 @@ Citizen.CreateThread(function()
 						wagon(wag)
                         StartGpsMultiRoute(6, true, true)
                         AddPointToGpsMultiRoute(Config.Point1.x, Config.Point1.y, Config.Point1.z)
+                        RSGCore.Functions.Notify('Letsss Gooo', 'success', 2000)
                         SetGpsMultiRouteRender(true)
 					
                     elseif JobNum == 2 then
@@ -159,6 +161,7 @@ Citizen.CreateThread(function()
 						wagon(wag)
                         StartGpsMultiRoute(6, true, true)
                         AddPointToGpsMultiRoute(Config.Point2.x, Config.Point2.y, Config.Point2.z)
+                        RSGCore.Functions.Notify('Letsss Gooo', 'success', 2000)
                         SetGpsMultiRouteRender(true)
 					
                     elseif JobNum == 3 then
@@ -170,9 +173,11 @@ Citizen.CreateThread(function()
 						isDelivering = true
 						pressed = false
 						wag = Config.Cart3
+                        
 						wagon(wag)
                         StartGpsMultiRoute(6, true, true)
                         AddPointToGpsMultiRoute(Config.Point3.x, Config.Point3.y, Config.Point3.z)
+                        RSGCore.Functions.Notify('Letsss Gooo', 'success', 2000)
                         SetGpsMultiRouteRender(true)
 					
                     elseif JobNum == 4 then
@@ -186,6 +191,7 @@ Citizen.CreateThread(function()
 						wagon(wag)
                         StartGpsMultiRoute(6, true, true)
                         AddPointToGpsMultiRoute(Config.Point4.x, Config.Point4.y, Config.Point4.z)
+                        RSGCore.Functions.Notify('Letsss Gooo', 'success', 2000)
                         SetGpsMultiRouteRender(true)
                     elseif JobNum == 6 then
 						RemoveBlip(p6)
@@ -198,6 +204,7 @@ Citizen.CreateThread(function()
 						wagon(wag)
                         StartGpsMultiRoute(6, true, true)
                         AddPointToGpsMultiRoute(Config.Point6.x, Config.Point6.y, Config.Point6.z)
+                        RSGCore.Functions.Notify('Letsss Gooo', 'success', 2000)
                         SetGpsMultiRouteRender(true)
 					
                     elseif JobNum == 5 then
@@ -211,6 +218,7 @@ Citizen.CreateThread(function()
                         shinewagon(wag)
                         StartGpsMultiRoute(6, true, true)
                         AddPointToGpsMultiRoute(Config.Point5.x, Config.Point5.y, Config.Point5.z)
+                        RSGCore.Functions.Notify('Letsss Gooo', 'success', 2000)
                         SetGpsMultiRouteRender(true)
 
                     end
@@ -269,6 +277,7 @@ Citizen.CreateThread(function()
 									JobNum = nil
 									RemoveBlip(p1)
                                     deletewagon() 
+                                    RSGCore.Functions.Notify('Thanks for the delivery', 'success', 2000)
                                     SetGpsMultiRouteRender(false)
 								end
 							
@@ -278,6 +287,7 @@ Citizen.CreateThread(function()
 									JobNum = nil
 									RemoveBlip(p2)
                                     deletewagon() 
+                                    RSGCore.Functions.Notify('Thanks for the delivery', 'success', 2000)
                                     SetGpsMultiRouteRender(false)
 								end
 
@@ -287,6 +297,7 @@ Citizen.CreateThread(function()
 									JobNum = nil
 									RemoveBlip(p3)
                                     deletewagon()
+                                    RSGCore.Functions.Notify('Thanks for the delivery', 'success', 2000)
                                     SetGpsMultiRouteRender(false)
 								end
 									
@@ -297,6 +308,7 @@ Citizen.CreateThread(function()
 									JobNum = nil
 									RemoveBlip(p4)
                                     deletewagon()
+                                    RSGCore.Functions.Notify('Thanks for the delivery', 'success', 2000)
                                     SetGpsMultiRouteRender(false)
                                 end
                                                                 
@@ -306,6 +318,7 @@ Citizen.CreateThread(function()
 									JobNum = nil
 									RemoveBlip(p6)
                                     deletewagon()
+                                    RSGCore.Functions.Notify('Thanks for the delivery', 'success', 2000)
                                     SetGpsMultiRouteRender(false)
                                 end
                             else
@@ -316,6 +329,7 @@ Citizen.CreateThread(function()
                                         JobNum = nil
                                         RemoveBlip(p5)
                                         deletewagon()
+                                        RSGCore.Functions.Notify('Thanks for the delivery', 'success', 2000)
                                         SetGpsMultiRouteRender(false)
                                     end
 
