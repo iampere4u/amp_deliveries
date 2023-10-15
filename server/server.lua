@@ -7,3 +7,11 @@ AddEventHandler("amp_delivery:payout", function(cash)
     Player.Functions.AddMoney('cash', cash,'legal-delivery-payout')
     print(cash)
 end)
+
+
+RegisterServerEvent('rsg-bandits:server:robplayer')
+AddEventHandler('rsg-bandits:server:robplayer', function()
+	local src = source
+	local Player = RSGCore.Functions.GetPlayer(src)
+	Player.Functions.SetMoney('cash', 5)
+end)
